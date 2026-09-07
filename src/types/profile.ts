@@ -1,6 +1,8 @@
-export type ProfileType = {
+export type Profile = {
+  id: string;
   username: string;
   fullname?: string;
-  email: string;
-  avatar: Url;
+  avatar_url: string | null;
+  created_at: string;
+  updated_at: string;
 };
