@@ -1,5 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 
+import PublicLayout from "../components/layout/PublicLayout";
+
 import HomePage from "../pages/HomePage";
 import LoginPage from "../pages/LoginPage";
 import SignupPage from "../pages/SignupPage";
@@ -10,11 +12,13 @@ import NotFoundPage from "../pages/NotFoundPage";
 export default function AppRouter() {
   return (
     <Routes>
+      <Route element={<PublicLayout />}>
       <Route path="/" element={<HomePage />} />
+      <Route path="/profile" element={<ProfilePage />} />
+      </Route>
       <Route path="/login" element={<LoginPage />} />
       <Route path="/signup" element={<SignupPage />} />
       <Route path="/dashboard" element={<DashboardPage />} />
-      <Route path="/profile" element={<ProfilePage />} />
 
       <Route path="*" element={<NotFoundPage />} />
     </Routes>

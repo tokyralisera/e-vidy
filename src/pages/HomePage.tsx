@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-import heroImage from "../assets/hero.png";
+// import heroImage from "../assets/hero.png";
 
 export default function HomePage() {
+  const heroImage = "https://i.ibb.co/xSSVbtfX/hero.png";
   return (
     <main className="min-h-screen bg-base-200">
       {/* Hero */}
@@ -56,7 +57,7 @@ export default function HomePage() {
           </p>
         </div>
 
-        <div className="grid gap-6 grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-3">
           <div className="card bg-base-100 shadow-md transition hover:-translate-y-1 hover:shadow-xl">
             <div className="card-body">
               <h3 className="card-title font-bold">Acheter</h3>
